@@ -8,10 +8,14 @@ let snake;
 
 (function setup() {
     snake = new Snake();
+    food = new Food();
+
+    food.randLocation();
     
     window.setInterval(() => {
         snake.update();
-        snake.draw();    
+        food.draw();  
+        snake.draw();  
     }, 100);
 }());
 
