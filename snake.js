@@ -9,7 +9,7 @@ function Snake() {
     this.draw = function() {
         context.fillStyle = "#000000";
 
-        for (let i = 0; i < this.body.length-1; i++) {
+        for (let i = 0; i < this.body.length; i++) {
             context.fillRect(this.body[i].x, this.body[i].y, size, size);
 
         }
@@ -17,11 +17,11 @@ function Snake() {
     }
 
     this.update = function() {
-        for (let i = 0 ; i < this.body.length; i++) {
+        for (let i = 0 ; i < this.body.length - 1; i++) {
             this.body[i] = this.body[i+1];
         }
 
-        this.body[this.bites -1] = { x: this.x, y: this.y}
+        this.body[this.bites - 1] = { x: this.x, y: this.y}
 
         context.clearRect(0, 0, canvas.width, canvas.height);
         this.x += this.xVelocity;
