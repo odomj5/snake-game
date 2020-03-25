@@ -10,9 +10,25 @@ function Snake() {
     }
 
     this.update = function() {
-        context.clearRect(10, 10, canvas.width, canvas.height);
+        context.clearRect(0, 0, canvas.width, canvas.height);
         this.x += this.xVelocity;
         this.y += this.yVelocity;
+
+        if (this.x > canvas.width) {
+            this.x = 0
+        }
+
+        if (this.x < 0) {
+            this.x = canvas.width
+        }
+
+        if (this.y > canvas.height) {
+            this.y = 0
+        }
+
+        if (this.y < 0) {
+            this.y = canvas.height
+        }
     }
 
     this.changePath = function(path) {
