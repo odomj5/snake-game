@@ -16,6 +16,11 @@ let snake;
         snake.update();
         food.draw();  
         snake.draw();  
+
+        if (snake.eat(food)) {
+            food.randLocation();
+        }
+
     }, 100);
 }());
 
