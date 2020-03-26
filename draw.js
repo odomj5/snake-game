@@ -21,6 +21,12 @@ let snake;
             food.randLocation();
         }
 
+
+        snake.collide()
+
+        document.querySelector(".info-box")
+            .innerText = `Your Score: ${snake.bites}`
+
     }, 100);
 }());
 

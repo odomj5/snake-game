@@ -3,7 +3,7 @@ function Snake() {
     this.y = 10;
     this.xVelocity = size * 1;
     this.yVelocity = 0;
-    this.bites = 0;
+    this.bites = 3;
     this.body = [];
 
     this.draw = function() {
@@ -72,6 +72,19 @@ function Snake() {
         } else {
             return false;
         }
+    }
+
+    this.collide = function() {
+        for (let i = 0; i < this.body.length; i++) {
+            if (this.x === this.body[i].x && this.y === this.body[i].y) {
+                this.restart();
+            }
+        }
+    }
+
+    this.restart = function() {
+        this.bites = 0;
+        this.body = [];
     }
 
 }
