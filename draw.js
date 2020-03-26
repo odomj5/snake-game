@@ -1,6 +1,6 @@
 const canvas = document.querySelector(".canvas");
 const context = canvas.getContext("2d");
-const size = 10;
+const size = 20;
 const row = canvas.height / size;
 const col = canvas.width / size;
 
@@ -14,7 +14,8 @@ let snake;
     
     window.setInterval(() => {
         snake.update();
-        food.draw();  
+        food.draw();
+        // food.drawImage()  
         snake.draw();  
 
         if (snake.eat(food)) {

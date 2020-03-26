@@ -1,6 +1,9 @@
 function Food() {
     this.x;
-    this.y
+    this.y;
+
+    const tacoImg = new Image();
+    tacoImg.src = "img/taco.png";
 
     this.randLocation = function() {
         this.x = (Math.floor(Math.random() * row -1) + 1) * size;
@@ -8,8 +11,12 @@ function Food() {
     }
 
     this.draw = function() {
-        context.fillStyle = '#8B0000';
-        context.fillRect(this.x, this.y, size, size)
+        // context.fillStyle = tacoImg;
+        // context.fillRect(this.x, this.y, size, size)
+        context.drawImage(tacoImg, this.x, this.y, size, size)
+        console.log(this.x)
+        console.log(this.y)
+        // console.log(tacoImg)
     }
 
 }

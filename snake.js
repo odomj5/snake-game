@@ -1,9 +1,9 @@
 function Snake() {
-    this.x = 10;
-    this.y = 10;
+    this.x = canvas.width/2;
+    this.y = canvas.height/2;
     this.xVelocity = size * 1;
     this.yVelocity = 0;
-    this.bites = 3;
+    this.bites = 0;
     this.body = [];
 
     this.draw = function() {
@@ -85,6 +85,7 @@ function Snake() {
     this.restart = function() {
         this.bites = 0;
         this.body = [];
+        food.randLocation()
     }
 
 }
