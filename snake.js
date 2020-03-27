@@ -28,19 +28,23 @@ function Snake() {
         this.y += this.yVelocity;
 
         if (this.x > canvas.width) {
-            this.x = 0
+            // this.x = 
+            this.restart()
         }
 
         if (this.x < 0) {
-            this.x = canvas.width
+            // this.x = canvas.width
+            this.restart()
         }
 
         if (this.y > canvas.height) {
-            this.y = 0
+            // this.y = 0
+            this.restart()
         }
 
         if (this.y < 0) {
-            this.y = canvas.height
+            // this.y = canvas.height
+            this.restart()
         }
     }
 
@@ -85,7 +89,10 @@ function Snake() {
     this.restart = function() {
         this.bites = 0;
         this.body = [];
-        food.randLocation()
+        food.randLocation();
+        this.x = canvas.width / 2;
+        this.y = canvas.height / 2;
+
     }
 
 }
