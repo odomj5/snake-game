@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Snake Game</title>
+    <title>Snek Game</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="modal.css">
 </head>
 <body>
-    <div class="instructions-div">Instructions:
-        <ul>
+    <div class="instructions-div">Snek Instructions:
+        <ol>
             <li>Press Spacebar to begin</li>
             <li>Use Arrows to control the snek</li>
             <li>Grow by eating tacos</li>
             <li>Stay alive by avoiding touching the walls or yourself</li>
-        </ul>
+        </ol>
     </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -22,12 +22,16 @@
         <!-- Modal content --> 
         <div class="modal-content">
             <span class="close">&times;</span>
+            <h2>Round Over!</h2>
             <p class="modal-p"></p>
+            <p>Press spacebar to try again</p>
         </div>
     
     </div>
     <canvas class="canvas" height="600px" width="600px" style="background-color: aquamarine;"></canvas>
-    <div class="info-box"></div>
+    <div class="info-box">
+        
+    </div>
 </body>
 <script type="text/javascript" src="modal.js"></script>
 <script type="text/javascript" src="food.js"></script>

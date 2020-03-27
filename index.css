@@ -1,4 +1,4 @@
-/* html, body {
+html, body {
   height:          100%;
   margin:          0;
   padding:         0;
@@ -6,6 +6,27 @@
   text-align:      center;
   color:           #fff;
   display:         flex;
+  flex-direction: column;
   justify-content: center;
   align-items:     center;
-} */
+}
+
+.instructions-div {
+    height: auto;
+    width: 600px;
+    font-size: 36px;
+    font-weight: bold;
+
+}
+
+.instructions-div > ol > li {
+    text-align: left;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.info-box {
+    font-size: 22px;
+    margin: 5%;
+
+}
