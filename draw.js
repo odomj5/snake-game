@@ -32,7 +32,7 @@ function setup() {
         snake.collide()
 
         document.querySelector(".info-box")
-            .innerText = `Your Score: ${snake.bites}`
+            .innerText = `Taco Count: ${snake.bites}`
 
     }, 100);
 
