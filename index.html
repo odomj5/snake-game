@@ -7,24 +7,30 @@
     <link rel="stylesheet" href="modal.css">
 </head>
 <body>
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
+    <div class="instructions-div">Instructions:
+        <ul>
+            <li>Press Spacebar to begin</li>
+            <li>Use Arrows to control the snek</li>
+            <li>Grow by eating tacos</li>
+            <li>Stay alive by avoiding touching the walls or yourself</li>
+        </ul>
+    </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
     
-        <!-- Modal content -->
+        <!-- Modal content --> 
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Restart Modal</p>
+            <p class="modal-p"></p>
         </div>
     
     </div>
     <canvas class="canvas" height="600px" width="600px" style="background-color: aquamarine;"></canvas>
     <div class="info-box"></div>
 </body>
+<script type="text/javascript" src="modal.js"></script>
 <script type="text/javascript" src="food.js"></script>
 <script type="text/javascript" src="snake.js"></script>
-<script type="text/javascript" src="modal.js"></script>
 <script type="text/javascript" src="draw.js"></script>
 
 </html>

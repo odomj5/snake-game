@@ -5,6 +5,7 @@ function Snake() {
     this.yVelocity = 0;
     this.bites = 0;
     this.body = [];
+    this.prevBites = 0
 
     this.draw = function() {
         context.fillStyle = "#000000";
@@ -87,6 +88,7 @@ function Snake() {
     }
 
     this.restart = function() {
+        this.prevBites = this.bites
         this.bites = 0;
         this.body = [];
         food.randLocation();

@@ -14,9 +14,6 @@ function Food() {
         // context.fillStyle = tacoImg;
         // context.fillRect(this.x, this.y, size, size)
         context.drawImage(tacoImg, this.x, this.y, size, size)
-        console.log(this.x)
-        console.log(this.y)
-        // console.log(tacoImg)
     }
 
 }
