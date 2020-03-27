@@ -25,6 +25,7 @@ function setup() {
 
         if (isPaused) {
             clearInterval(play)
+            openModal()
         }
 
 
