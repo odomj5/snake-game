@@ -3,6 +3,7 @@ const context = canvas.getContext("2d");
 const size = 20;
 const row = canvas.height / size;
 const col = canvas.width / size;
+let isPaused = false
 
 let snake;
 
@@ -11,8 +12,8 @@ let snake;
     food = new Food();
 
     food.randLocation();
-    
-    window.setInterval(() => {
+        
+    const play = window.setInterval(() => {
         snake.update();
         food.draw();
         // food.drawImage()  
@@ -22,6 +23,10 @@ let snake;
             food.randLocation();
         }
 
+        if (isPaused) {
+            clearInterval(play)
+        }
+
 
         snake.collide()
 
@@ -29,6 +34,7 @@ let snake;
             .innerText = `Your Score: ${snake.bites}`
 
     }, 100);
+
 }());
 
 window.addEventListener("keydown", ((evt) => {
