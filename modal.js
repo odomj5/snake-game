@@ -16,7 +16,7 @@ function openModal() {
     modal.style.display = "block";
     let bite = snake.prevBites === 1 ? 'Bite' : 'Bites'
     document.querySelector(".modal-p")
-        .innerText = `Your Final Score Was ${snake.prevBites} ${bite}`
+        .innerText = `Final Score ${snake.prevBites} ${bite}`
 }
 
 function closeModal() {
