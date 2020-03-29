@@ -4,6 +4,7 @@ const size = 20;
 const row = canvas.height / size;
 const col = canvas.width / size;
 let isPaused = true;
+let refresh = 100
 
 let snake;
 
@@ -31,10 +32,10 @@ function setup() {
 
         snake.collide()
 
-        document.querySelector(".info-box")
+        document.querySelector(".score-cont")
             .innerText = `Taco Count: ${snake.bites}`
 
-    }, 100);
+    }, refresh);
 
 };
 

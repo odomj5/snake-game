@@ -27,6 +27,13 @@ html, body {
 
 .info-box {
     font-size: 22px;
-    margin: 5%;
-
+    /* margin: 5%; */
+    display: flex;
 }
+
+.info-box > div {
+    margin: 5%;
+    min-width: 150px;
+}
+
+/*slider css */
