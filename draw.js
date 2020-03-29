@@ -4,7 +4,9 @@ const size = 20;
 const row = canvas.height / size;
 const col = canvas.width / size;
 let isPaused = true;
-let refresh = 100
+let slider = document.getElementById("diffRange")
+let output = document.getElementById("speed")
+let refresh = 200
 
 let snake;
 
@@ -13,6 +15,13 @@ function setup() {
     food = new Food();
 
     food.randLocation();
+
+    let speedInt = parseInt(slider.value, 10)
+    if (speedInt === 5) {
+        refresh = 200
+    } else {
+        refresh = 200 + ((speedInt - 5) * -50)
+    }
         
     const play = window.setInterval(() => {
         snake.update();
@@ -101,6 +110,11 @@ window.addEventListener("keydown", ((evt) => {
         const path = evt.key.replace("Arrow", "")
         snake.changePath(path)
     }
-
     
 }))
+
+output.innerHTML = slider.value; 
+slider.oninput = function () {
+    output.innerHTML = this.value;
+}
+
