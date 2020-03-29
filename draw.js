@@ -4,6 +4,9 @@ const size = 20;
 const row = canvas.height / size;
 const col = canvas.width / size;
 let isPaused = true;
+let slider = document.getElementById("diffRange")
+let output = document.getElementById("speed")
+let refresh = 150
 
 let snake;
 
@@ -12,6 +15,13 @@ function setup() {
     food = new Food();
 
     food.randLocation();
+
+    let speedInt = parseInt(slider.value, 10)
+    if (speedInt === 7) {
+        refresh = 150
+    } else {
+        refresh = 150 + ((speedInt - 7) * -7)
+    }
         
     const play = window.setInterval(() => {
         snake.update();
@@ -31,10 +41,10 @@ function setup() {
 
         snake.collide()
 
-        document.querySelector(".info-box")
+        document.querySelector(".score-cont")
             .innerText = `Taco Count: ${snake.bites}`
 
-    }, 100);
+    }, refresh);
 
 };
 
@@ -100,6 +110,11 @@ window.addEventListener("keydown", ((evt) => {
         const path = evt.key.replace("Arrow", "")
         snake.changePath(path)
     }
-
     
 }))
+
+output.innerHTML = slider.value; 
+slider.oninput = function () {
+    output.innerHTML = this.value;
+}
+
