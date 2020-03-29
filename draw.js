@@ -6,7 +6,7 @@ const col = canvas.width / size;
 let isPaused = true;
 let slider = document.getElementById("diffRange")
 let output = document.getElementById("speed")
-let refresh = 200
+let refresh = 150
 
 let snake;
 
@@ -17,10 +17,10 @@ function setup() {
     food.randLocation();
 
     let speedInt = parseInt(slider.value, 10)
-    if (speedInt === 5) {
-        refresh = 200
+    if (speedInt === 7) {
+        refresh = 150
     } else {
-        refresh = 200 + ((speedInt - 5) * -50)
+        refresh = 150 + ((speedInt - 7) * -7)
     }
         
     const play = window.setInterval(() => {
