@@ -10,7 +10,7 @@ html, body {
   justify-content: center;
   align-items:     center;
   background-image: url("img/background-pattern.jpg");
-  background-size: cover;
+  /* background-size: cover; */
   /* background-repeat: no-repeat; */
 }
 
