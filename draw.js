@@ -7,6 +7,7 @@ let isPaused = true;
 let slider = document.getElementById("diffRange")
 let output = document.getElementById("speed")
 let refresh = 150
+const instructions = document.getElementById("")
 
 let snake;
 

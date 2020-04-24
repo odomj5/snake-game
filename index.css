@@ -41,14 +41,42 @@ canvas {
 
 
 .instructions-div > ol {
-    margin-bottom: 5px;
-    background-color: rgba(255, 255, 255, 0.733);
+    margin: 0px;
+    background-color: rgba(246, 244, 244, 0.842);
 }
 
 .instructions-div > ol > li {
     text-align: left;
     font-size: 18px;
     font-weight: normal;
+    
+}
+
+.begin-div {
+  margin-top: 250px;
+}
+
+.start-btn {
+  position: relative;
+  background-image: url('img/taco.png');
+  background-size: cover;
+  background-position: 50% 50%;
+  /* background-repeat: no-repeat; */
+  border: none;
+  padding: 2px 8px;
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  margin-left: 40%;
+  cursor: pointer;
+  
+}
+
+.start-btn > div {
+  position: absolute;
+  left: 45px;
+  top: 30px;
+
 }
 
 .info-box {
@@ -64,22 +92,22 @@ canvas {
 .slider-cont {
   width: 100%; /* Width of the outside container */
   font-size: 22px;
-  margin: 1%;
+  /* margin: 1%; */
   font-weight: normal;
 }
 
 .slider-cont > p {
-    margin: 1%;
+    /* margin: 1%; */
 }
 
 /* The slider itself */
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  width: 100%; /* Full-width */
+  width: 90%; /* Full-width */
   height: 15px; /* Specified height */
   border-radius: 5px;
-  background: #d3d3d3; /* Grey background */
+  background: #d1930e; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
