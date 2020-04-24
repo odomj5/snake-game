@@ -6,25 +6,48 @@ html, body {
   text-align:      center;
   color:           #fff;
   display:         flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items:     center;
+  background-image: url("img/background-pattern.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: relative;
+}
+
+canvas {
+  position: relative;
 }
 
 .instructions-div {
-    height: auto;
+    position: absolute;
+    top: 0;
+    left: 15;
+    /* margin: 20px; */
+    height: 600px;
     width: 600px;
     font-size: 36px;
     font-weight: bold;
+    color: black;
+    background-color: white;
+    background-image: url("img/snake.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+
 
 .instructions-div > ol {
     margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.733);
 }
 
 .instructions-div > ol > li {
     text-align: left;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: normal;
 }
 

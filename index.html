@@ -8,19 +8,7 @@
     <link rel="stylesheet" href="modal.css">
 </head>
 <body>
-    <div class="instructions-div">Snek Instructions:
-        <ol>
-            <li>Press Spacebar to begin</li>
-            <li>Use Arrows to control the snek</li>
-            <li>Grow by eating tacos</li>
-            <li>Stay alive by avoiding touching the walls or yourself</li>
-            <li>Use the slider to control the snek speed </li>
-        </ol>
-            <div class="slider-cont">
-                <input type="range" min="1" max="20" value="7" id="diffRange" class="slider">
-                <p>Speed: <span id="speed"></span></p>
-            </div>
-    </div>
+   
     <!-- The Modal -->
     <div id="myModal" class="modal">
     
@@ -33,7 +21,23 @@
         </div>
     
     </div>
-    <canvas class="canvas" height="600px" width="600px" style="background-color: aquamarine;"></canvas>
+    <div class="container">
+
+        <canvas class="canvas" height="600px" width="600px" style="background-color: aquamarine;"></canvas>
+        <div class="instructions-div">Instructions:
+            <ol>
+                <!-- <li>Press spacebar to begin</li> -->
+                <li>Use arrows to control the snek</li>
+                <li>Grow by eating tacos</li>
+                <li>Stay alive by avoiding touching the walls or yourself</li>
+                <li>Use the slider to control the snake prior to each round speed </li>
+            </ol>
+            <div class="slider-cont">
+                <input type="range" min="1" max="20" value="7" id="diffRange" class="slider">
+                <p>Speed: <span id="speed"></span></p>
+            </div>
+        </div>
+    </div>
     <div class="info-box">
         
         <div class="score-cont">
