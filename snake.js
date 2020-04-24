@@ -1,3 +1,5 @@
+const instructionsDiv = document.querySelector(".instructions-div");
+
 function Snake() {
     this.x = canvas.width/2;
     this.y = canvas.height/2;
@@ -95,6 +97,8 @@ function Snake() {
         this.x = canvas.width / 2;
         this.y = canvas.height / 2;
         isPaused = true
+        instructionsDiv.style.display = "block"
+
     }
 
 }

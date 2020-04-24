@@ -6,12 +6,29 @@ html, body {
   text-align:      center;
   color:           #fff;
   display:         flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: center;
   align-items:     center;
   background-image: url("img/background-pattern.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
+}
+
+.header {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.header > div {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header > a > img {
+  width: 50px;
+  height: 50px;
 }
 
 .container {
@@ -30,7 +47,7 @@ canvas {
   /* margin: 20px; */
   height: 600px;
   width: 600px;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   color: black;
   background-color: white;
@@ -44,6 +61,7 @@ canvas {
 .instructions-div > ol {
     margin: 0px;
     background-color: rgba(246, 244, 244, 0.842);
+    text-align: left;
 }
 
 .instructions-div > ol > li {
