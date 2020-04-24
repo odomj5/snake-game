@@ -7,7 +7,8 @@ let isPaused = true;
 let slider = document.getElementById("diffRange")
 let output = document.getElementById("speed")
 let refresh = 150
-const instructions = document.getElementById("")
+const instructions = document.querySelector(".instructions-div");
+const startButton = document.querySelector(".start-btn")
 
 let snake;
 
@@ -101,18 +102,35 @@ function setup() {
 // }
 
 
-window.addEventListener("keydown", ((evt) => {
+// window.addEventListener("keydown", ((evt) => {
 
-    if(evt.code === "Space" && isPaused) {
-        setup()
-        isPaused = false
-        closeModal()
-    } else {
-        const path = evt.key.replace("Arrow", "")
-        snake.changePath(path)
-    }
+//     if(evt.code === "Space" && isPaused) {
+//         setup()
+//         isPaused = false
+//         closeModal()
+//     } else {
+//         const path = evt.key.replace("Arrow", "")
+//         snake.changePath(path)
+//     }
     
+// }))
+
+
+window.addEventListener("keydown", ((evt) => {
+    const path = evt.key.replace("Arrow", "")
+    snake.changePath(path)
 }))
+
+
+startButton.onclick = function start() {
+    instructions.style.display = "none"
+    setup()
+    isPaused = false 
+    closeModal()
+}
+
+
+
 
 output.innerHTML = slider.value; 
 slider.oninput = function () {
