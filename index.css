@@ -51,9 +51,10 @@ canvas {
   font-weight: bold;
   color: black;
   background-color: white;
-  background-image: url("img/snake.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("img/snaketaco.jpeg");
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* object-fit: cover; */
 }
 
 
