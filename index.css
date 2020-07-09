@@ -9,9 +9,9 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items:     center;
-  background-image: url("img/background-pattern.jpg");
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
+  background-image: url("img/watercolorbg.jpg");
+  background-size: cover;
+  /* background-repeat: repeat-x; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
