@@ -8,7 +8,8 @@ let slider = document.getElementById("diffRange")
 let output = document.getElementById("speed")
 let refresh = 150
 const instructions = document.querySelector(".instructions-div");
-const startButton = document.querySelector(".start-btn")
+const startButton = document.querySelector(".start-btn");
+const soundToggle = document.getElementById("mute");
 
 let snake;
 
@@ -124,9 +125,18 @@ window.addEventListener("keydown", ((evt) => {
 
 startButton.onclick = function start() {
     instructions.style.display = "none"
+    startSound.play();
     setup()
     isPaused = false 
     closeModal()
+}
+
+soundToggle.onclick = function muteToggle() {
+    const muteIcon = document.getElementById("mute").src;
+    console.log(muteIcon)
+    const newMuteIcon = muteIcon === "file:///home/jon/Desktop/jsp/img/soundOn.png" ? "file:///home/jon/Desktop/jsp/img/soundOff.png" : "file:///home/jon/Desktop/jsp/img/soundOn.png";
+    document.getElementById("mute").src = newMuteIcon;
+    console.log(soundToggle.src) 
 }
 
 
@@ -136,4 +146,7 @@ output.innerHTML = slider.value;
 slider.oninput = function () {
     output.innerHTML = this.value;
 }
+
+let startSound = new Audio();
+startSound.src = "audio/start.mp3";
 

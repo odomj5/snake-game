@@ -56,18 +56,22 @@ function Snake() {
             case 'Left':
                 this.xVelocity = size * -1;
                 this.yVelocity = 0;
+                left.play();
                 break;
             case 'Right':
                 this.xVelocity = size * 1;
                 this.yVelocity = 0;
+                right.play();
                 break;
             case 'Up':
                 this.xVelocity = 0;
                 this.yVelocity = size * -1;
+                up.play();
                 break;
             case 'Down':
                 this.xVelocity = 0;
                 this.yVelocity = size * 1;
+                down.play();
                 break;
         }
     }
@@ -75,6 +79,7 @@ function Snake() {
     this.eat = function(food) {
         if (this.x === food.x && this.y === food.y) {
             this.bites++;
+            eat.play();
             return true;
         } else {
             return false;
@@ -90,6 +95,7 @@ function Snake() {
     }
 
     this.restart = function() {
+        dead.play();
         this.prevBites = this.bites
         this.bites = 0;
         this.body = [];
@@ -101,4 +107,19 @@ function Snake() {
 
     }
 
+    let dead = new Audio();
+    let eat = new Audio();
+    let left = new Audio();
+    let right = new Audio();
+    let up = new Audio();
+    let down = new Audio();
+    
+
+    dead.src = "audio/dead.mp3";
+    eat.src = "audio/eat.mp3";
+    left.src = "audio/left.mp3";
+    right.src = "audio/right.mp3";
+    up.src = "audio/up.mp3";
+    down.src = "audio/down.mp3";
+;
 }
